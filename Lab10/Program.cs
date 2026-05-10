@@ -1,4 +1,4 @@
-﻿using Lab10.Blue;
+using Lab10.White;
 
 namespace Lab10
 {
@@ -6,7 +6,11 @@ namespace Lab10
     {
         public static void Main()
         {
-            var simpleSerislizator = new FileName("Example");
+            var simpleSerializator = new WhiteTxtFileManager("Example1");
+            simpleSerializator.Serialize(new Lab9.White.White());
+
+            simpleSerializator = new WhiteTxtFileManager("Example2", "txt");
+            simpleSerializator.Serialize(new Lab9.White.White());
         }
     }
 }
